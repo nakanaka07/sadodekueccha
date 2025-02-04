@@ -2,17 +2,27 @@ import React, { useEffect, useRef } from 'react';
 import type { MarkerProps } from '../../utils/types';
 import './Marker.css';
 
+import recommendIcon from '../../utils/images/ano_icon03.png';
+import ryotsuAikawaIcon from '../../utils/images/shi_icon03.png';
+import kanaiSawadaNiiboHatanoManoIcon from '../../utils/images/shi_icon03.png';
+import akadomariHamochiOgiIcon from '../../utils/images/shi_icon03.png';
+import snackIcon from '../../utils/images/shi_icon02.png';
+import publicToiletIcon from '../../utils/images/ano_icon01.png';
+import parkingIcon from '../../utils/images/shi_icon01.png';
+import currentLocationIcon from '../../utils/images/ano_icon02.png';
+import defaultIcon from '../../utils/images/row2.png';
+
 // マーカーアイコンのパスを定義
 const markerIcons: Record<string, string> = {
-  RECOMMEND: '/src/utils/images/ano_icon03.png',
-  RYOTSU_AIKAWA: '/src/utils/images/shi_icon03.png',
-  KANAI_SAWADA_NIIBO_HATANO_MANO: '/src/utils/images/shi_icon03.png',
-  AKADOMARI_HAMOCHI_OGI: '/src/utils/images/shi_icon03.png',
-  SNACK: '/src/utils/images/shi_icon02.png',
-  PUBLIC_TOILET: '/src/utils/images/ano_icon01.png',
-  PARKING: '/src/utils/images/shi_icon01.png',
-  CURRENT_LOCATION: '/src/utils/images/ano_icon02.png', // 現在地マーカーアイコンのパスを追加
-  DEFAULT: '/src/utils/images/row2.png', // デフォルトのアイコン画像を追加
+  RECOMMEND: recommendIcon,
+  RYOTSU_AIKAWA: ryotsuAikawaIcon,
+  KANAI_SAWADA_NIIBO_HATANO_MANO: kanaiSawadaNiiboHatanoManoIcon,
+  AKADOMARI_HAMOCHI_OGI: akadomariHamochiOgiIcon,
+  SNACK: snackIcon,
+  PUBLIC_TOILET: publicToiletIcon,
+  PARKING: parkingIcon,
+  CURRENT_LOCATION: currentLocationIcon, // 現在地マーカーアイコンのパスを追加
+  DEFAULT: defaultIcon, // デフォルトのアイコン画像を追加
 };
 
 const Marker = React.memo(
