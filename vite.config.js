@@ -28,7 +28,7 @@ export default defineConfig(({ mode, command }) => {
   const isDev = command === 'serve'; // 開発モードかどうかを判定
 
   return {
-    base: mode === 'production' ? '/kueccha/' : '/', // ベースURLを設定
+    base: mode === 'production' ? '/sadodekueccha/' : '/', // ベースURLを設定
     plugins: [react(), tsconfigPaths()], // 使用するプラグインを設定
     resolve: {
       alias: {
